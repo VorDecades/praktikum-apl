@@ -213,7 +213,7 @@
                     bool dashboardAktif = true;
                     string roleSaatIni = dbUser[indeksUserAktif].roleUser;
 
-                    cout << "\nSelamat datang, " << dbUser[indeksUserAktif].namaUsername << "!\n";
+                    cout << "\nSelamat datang, " << dbUser[indeksUserAktif].namaUser << "!\n";
 
                     do {
                         int menuDashboard;
@@ -523,7 +523,7 @@
                                         cout << "----------------------------------------\n";
                                         for (int i = 0; i < jumlahUser; i++) {
                                             cout << left << setw(5) << dbUser[i].idUser
-                                                << setw(20) << dbUser[i].namaUsername
+                                                << setw(20) << dbUser[i].namaUser
                                                 << setw(15) << dbUser[i].roleUser << "\n";
                                         }
                                     }
@@ -536,9 +536,9 @@
                                             if (dbUser[i].idUser == idUserEdit) {
                                                 ketemu = true;
                                                 cout << "Username Baru: ";
-                                                cin >> dbUser[i].namaUsername;
+                                                cin >> dbUser[i].namaUser;
                                                 cout << "NIM/Password Baru: ";
-                                                cin >> dbUser[i].passwordNim;
+                                                cin >> dbUser[i].password;
                                                 cout << "Data User berhasil diperbarui!\n";
                                                 break;
                                             }
@@ -576,11 +576,11 @@
                             }
                             else if (roleSaatIni == "user") {
                                 cout << "\n= EDIT PROFIL =\n";
-                                cout << "Nama Username saat ini: " << dbUser[indeksUserAktif].namaUsername << "\n";
+                                cout << "Nama Username saat ini: " << dbUser[indeksUserAktif].namaUser << "\n";
                                 cout << "Masukkan Nama Username baru: ";
-                                cin >> dbUser[indeksUserAktif].namaUsername;
+                                cin >> dbUser[indeksUserAktif].namaUser;
                                 cout << "Masukkan NIM/Password baru: ";
-                                cin >> dbUser[indeksUserAktif].passwordNim;
+                                cin >> dbUser[indeksUserAktif].password;
                                 cout << "Profil berhasil diperbarui!\n";
                             }
                             else {
